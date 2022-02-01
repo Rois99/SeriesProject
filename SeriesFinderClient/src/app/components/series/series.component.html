@@ -1,0 +1,16 @@
+<div class="main">
+
+    <div class="wrapper">
+        <div *ngIf="series&&series.Title" class="series" [ngStyle]="{background : series.imdbRating > 8.5? 'lightgreen': 'lightcoral'}">
+            <h4 style="align-self: center; background-color: burlywood;">Your Series</h4>
+            <div >title: {{series.Title}}</div>
+            <div >year: {{series.Year}}</div>
+            <div>rating: {{series.imdbRating}}</div>
+            <div>total seasons: {{series.totalSeasons}}</div>
+            <select style="width: 15%;" [(ngModel)]="selectedSeasonNum" (change)="SelectSeason()">
+                <option *ngFor="let season of seasons">{{season}}</option>
+            </select>
+            <app-season *ngIf="selectedSeason" [season]="selectedSeason"></app-season>
+        </div>
+    </div>
+</div>

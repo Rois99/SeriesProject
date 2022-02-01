@@ -1,0 +1,14 @@
+<div *ngIf="season">
+    <div class="wrapper">
+        <div style="background-color: burlywood; align-self: center;">Episodes:</div>
+        <div style="flex-wrap: wrap; overflow:scroll; height: 30vh;">
+            <div *ngFor="let episode of season.Episodes" style="margin: 2px;">
+                <div [ngStyle]="{background : episode.imdbRating > 8.5? 'green': 'red'}">
+                    <div> Title : {{episode.Title}}</div>
+                    <div> Number : {{episode.episode}} </div>
+                    <div> imdbRatiog : {{episode.imdbRating}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

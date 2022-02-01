@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="popularSeries">
+        <h4>
+            Choose One of the serieses
+        </h4>
+        <select style="background-color: inherit;" aria-placeholder="Select series from list" [(ngModel)]="selectedSeries"
+            (ngModelChange)="onChange($event)">
+            <option *ngFor="let series of seriesesArray" [ngValue]=series>{{series.Title}}</option>
+        </select>
+    </div>
+    <div class="searchSeries">
+        <h4 style="align-self: center;">
+            Or Search By YourSelf
+        </h4>
+        <div style="align-self: center;">
+            <input placeholder="Or Search By Your-self" type="text" [(ngModel)]="TitleS">
+            <button type="button" (click)=getTitle()> Click me! </button>
+        </div>
+    </div>
+
+    <div  *ngIf="selectedSeries" class="series">
+        <app-series *ngIf="selectedSeries"></app-series>
+    </div>
+</div>

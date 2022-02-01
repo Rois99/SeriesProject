@@ -1,0 +1,22 @@
+.Header{
+    background-color: lightsteelblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 6fr;
+}
+
+
+.Title{
+align-items: center;
+}
+.Title::after{
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: gray;}
+.Title::before{
+    content: "";
+    font-size: xx-large;
+    height: 1px;
+    display: block;
+    background-color: gray;}

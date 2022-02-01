@@ -1,0 +1,31 @@
+.SeriesSelect{
+    background-color: gray;
+}
+.wrapper{
+    align-items: flex-start;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 5fr;
+    height: 40vh;
+    border-width: 5px;
+}
+.popularSeries{
+    display: flex;
+    flex-direction: column;
+    background-color: darkkhaki;
+    grid-column: 1;
+}
+
+.searchSeries{
+    display: flex;
+    flex-direction: column;
+    background-color: darkkhaki;
+    float: left;
+    grid-column: 2;
+}
+
+.series{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: burlywood;
+}
